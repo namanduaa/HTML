@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample HTML and CSS</title>
+  <style>
+    :root {
+      --primary: #2d6cdf;
+      --secondary: #f5f7ff;
+      --text: #1f2937;
+      --card: #ffffff;
+      --shadow: 0 12px 30px rgba(45, 108, 223, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: linear-gradient(180deg, #eef2ff 0%, #ffffff 100%);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: #4b5563;
+      font-size: 1rem;
+    }
+
+    .card-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(45, 108, 223, 0.18);
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--primary);
+    }
+
+    .card p {
+      color: #58616d;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.25rem;
+      background: var(--primary);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 999px;
+      transition: background 0.25s ease;
+    }
+
+    .button:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>HTML + CSS Example</h1>
+      <p>Clean layout with a responsive card grid and modern styling.</p>
+    </header>
+
+    <section class="card-grid">
+      <article class="card">
+        <h2>Responsive design</h2>
+        <p>Use flexible grid layouts and media-friendly spacing to ensure your page looks great on any screen.</p>
+        <a href="#" class="button">Learn more</a>
+      </article>
+
+      <article class="card">
+        <h2>Semantic structure</h2>
+        <p>Organize content using appropriate HTML elements like header, section, and article for better accessibility.</p>
+        <a href="#" class="button">View details</a>
+      </article>
+
+      <article class="card">
+        <h2>Modern styling</h2>
+        <p>Apply consistent colors, spacing, and hover states to make your interface feel polished and easy to use.</p>
+        <a href="#" class="button">Get started</a>
+      </article>
+    </section>
+  </div>
+</body>
+</html>
